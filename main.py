@@ -17,6 +17,26 @@ class DFA:
             self.states, self.alphabet, self.transition_function, self.start_state, self.accept_states)
 
     def lexerAritmetico(self, string:str)->list:
+        """
+        Las expresiones aritméticas sólo podrán contener los siguientes tipos de tokens:
+
+        Enteros
+        Flotantes (Reales)
+        Operadores:
+        Asignación
+        Suma
+        Resta
+        Multiplicación
+        División
+        Potencia
+        Identificadores:
+        Variables
+        Símbolos especiales:
+        (
+        )
+        Comentarios:
+        // seguido de caracteres hasta que se acabe el renglón
+        """
         pass
 
     
@@ -29,6 +49,6 @@ if __name__ == '__main__':
     #lexer = DFA(
     
     
-    lexerAritmetico("test.txt")
+    lexerAritmetico("test.txt",lexer)
     
 
