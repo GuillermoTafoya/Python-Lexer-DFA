@@ -1,12 +1,12 @@
 class DFA:
-    def __init__(self, states, alphabet, transition_function, start_state, accept_states):
+    def __init__(self, states:set, alphabet:list, transition_function:dict, start_state:int, accept_states:set)->None:
         self.states = states
         self.alphabet = alphabet
         self.transition_function = transition_function
         self.start_state = start_state
         self.accept_states = accept_states
 
-    def is_accepted(self, string):
+    def is_accepted(self, string:str)->bool:
         current_state = self.start_state
         for char in string:
             current_state = self.transition_function[current_state][char]
@@ -16,13 +16,19 @@ class DFA:
         return "DFA: \n\tStates: {}\n\tAlphabet: {}\n\tTransition Function: {}\n\tStart State: {}\n\tAccept States: {}".format(
             self.states, self.alphabet, self.transition_function, self.start_state, self.accept_states)
 
+    def lexerAritmetico(self, string:str)->list:
+        pass
+
     
 
-def lexerAritmetico(archivo:str)->None:
-    pass
+def lexerAritmetico(archivo:str,lexer:DFA)->None:
+    lexer.lexerAritmetico(archivo)
 
 
 if __name__ == '__main__':
+    #lexer = DFA(
+    
+    
     lexerAritmetico("test.txt")
     
 
