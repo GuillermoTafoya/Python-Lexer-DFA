@@ -29,7 +29,8 @@ class DFA:
                 idx += 1
                 pastStates.append(self.current_state)
             elif string[idx] == " " or string[idx] == "":
-                currentSubString += string[idx]
+                if self.current_state == "Comentario":
+                    currentSubString += string[idx]
                 idx += 1
             else:
                 if currentSubString:
@@ -48,6 +49,7 @@ class DFA:
 def lexerAritmetico(archivo:str,lexer:DFA)->None:
     lexer.lexerAritmetico(archivo)
 
+import sys
 if __name__ == '__main__':
     
     lexer = DFA(
@@ -75,7 +77,8 @@ if __name__ == '__main__':
             },
             "Real":{
                 **{chr(num):"Real" for num in range(48,58)},    # Numbers
-                "E": "Exponente"
+                "E": "Exponente",
+                "e": "Exponente"
             }, 
             "Exponente":{
                 "-": "Real",
@@ -124,10 +127,13 @@ if __name__ == '__main__':
 
         accept_states={"Fin de Estado"}
     )
-    with open("test.txt", "r") as file:
+    
+    _, ifile, ofile = sys.argv
+    
+    with open(ifile, "r") as file:
         result = lexer.lexerAritmetico(file.read())
     # Save the result in a text file as string pairs
-    with open("result.txt", "w") as file:
+    with open(ofile, "w") as file:
         for token in result:
             file.write("{},{}\n".format(token[0], token[1]))
 

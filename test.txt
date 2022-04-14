@@ -2,3 +2,6 @@ b=7
 a = 32.4 *(-8.6 - b)/       6.1E-8 // Esto tmb es un comentario
 
 d = a ^ b // Esto es un comentario
+
+variable1 = 22.0E17 * 45.1
+variable2=-45 +32
