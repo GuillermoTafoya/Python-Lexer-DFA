@@ -69,17 +69,17 @@ if __name__ == '__main__':
             }, 
 
             "Entero":{
-                ".":"Flotante", 
+                ".":"Real", 
                 **{chr(num):"Entero" for num in range(48,58)},      # Numbers
 
             },
-            "Flotante":{
-                **{chr(num):"Flotante" for num in range(48,58)},    # Numbers
+            "Real":{
+                **{chr(num):"Real" for num in range(48,58)},    # Numbers
                 "E": "Exponente"
             }, 
             "Exponente":{
-                "-": "Flotante",
-                **{chr(num):"Flotante" for num in range(48,58)}     # Numbers
+                "-": "Real",
+                **{chr(num):"Real" for num in range(48,58)}     # Numbers
             },
 
 

@@ -3,16 +3,16 @@ Asignacion,=
 Entero,7
 Variable,a 
 Asignacion,= 
-Flotante,32.4 
+Real,32.4 
 Multiplicacion,*
 Parentesis Izquierdo,(
 Resta,-
-Flotante,8.6 
+Real,8.6 
 Resta,- 
 Variable,b
 Parentesis Derecho,)
 Division,/       
-Flotante,6.1E-8 
+Real,6.1E-8 
 Comentario,// Esto tmb es un comentario
 Variable,d 
 Asignacion,= 
