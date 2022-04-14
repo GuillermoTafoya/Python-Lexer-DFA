@@ -1,0 +1,34 @@
+Token,Tipo
+b,Variable
+=,Asignacion
+7,Entero
+a,Variable
+=,Asignacion
+32.4,Real
+*,Multiplicacion
+(,Parentesis Izquierdo
+-,Resta
+8.6,Real
+-,Resta
+b,Variable
+),Parentesis Derecho
+/,Division
+6.1E-8,Real
+// Esto tmb es un comentario,Comentario
+d,Variable
+=,Asignacion
+a,Variable
+^,Potencia
+b,Variable
+// Esto es un comentario,Comentario
+variable1,Variable
+=,Asignacion
+22.0E17,Real
+*,Multiplicacion
+45.1,Real
+variable2,Variable
+=,Asignacion
+-,Resta
+45,Entero
++,Suma
+32,Entero

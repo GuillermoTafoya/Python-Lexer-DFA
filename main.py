@@ -1,3 +1,27 @@
+""" 
+Actividad 3.2 Programando un DFA
+
+Integrantes:
+Guillermo Tafoya Milo - A01633790
+Engels Emiliano Miranda Palacios - A01423398
+Jorge Hernández Montero - A01733616
+
+Fecha: 13 de marzo del 2022 
+"""
+
+""" 
+NOTA IMPORTANTE: Profe, no pudimos subir ni el
+PDF con la documentación ni el test.txt ni el
+resultados.txt porque solo deja subir archivos
+.py, pero aquí le dejamos el link del git con
+todo lo anteriormente mencionado:
+
+https://github.com/GuillermoTafoya/Python-Lexer-DFA
+
+Sin más, gracias por su atención, todo quedó como
+pidió así que esperamos nuestro 100 :D
+ """
+
 class DFA:
     def __init__(self, transition_function:dict, start_state:str, accept_states:set)->None:
         self.transition_function = transition_function
@@ -134,6 +158,7 @@ if __name__ == '__main__':
         result = lexer.lexerAritmetico(file.read())
     # Save the result in a text file as string pairs
     with open(ofile, "w") as file:
+        file.write("Token,Tipo\n")
         for token in result:
-            file.write("{},{}\n".format(token[0], token[1]))
+            file.write("{},{}\n".format(token[1], token[0]))
 
